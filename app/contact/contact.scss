@@ -1,0 +1,25 @@
+.contact {
+    text-align: center;
+}
+
+.contact-icons {
+    margin-top: 25px;
+
+    li {
+        margin: 0 5px; 
+    }
+}
+
+.contact-icon {
+    width: 34px;
+    height: 34px;
+    background: $main-grey;
+    color: $light-color;
+    font-size: 19px;
+    padding-top: 7px;
+
+    &:hover {
+        background: $main-color;
+        color: $light-color;
+    }
+}

@@ -1,0 +1,21 @@
+.footer {
+    padding: 2% 0;
+
+    @media (min-width: $min-width) {
+        text-align: center;
+    }
+}
+
+.navItem {
+    margin: 20px;
+    display: block;
+
+    @media (min-width: $min-width) {
+        display: inline-block;
+        margin: 0 20px;
+    }
+    
+    a {
+        color: darken($main-grey, 40%);
+    }
+}

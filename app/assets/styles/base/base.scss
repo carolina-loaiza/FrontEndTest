@@ -1,0 +1,179 @@
+//
+// Variables
+//
+
+// Typography
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600|Open+Sans);
+
+$title:'Raleway', Arial;
+$text:'Open Sans', Arial;
+
+// Colors
+
+$main-color: #2ecc71;
+$main-grey: #e3e3e3;
+$light-color: #fff;
+$dark-color: #000;
+
+//
+// General layout rules
+//
+
+@import "bourbon";
+@import "neat";
+
+$max-width: 1080px;
+//Media Queries
+$min-width: 930px;
+$min-width-small: 380px;
+
+
+/*
+ * Rules for base elements
+ */
+
+*:active,
+*:focus {
+  outline: none;
+}
+
+body {
+  font-size: 62.5%;
+  background-color: #E8E6DC;
+	margin: 0;
+}
+
+a {
+  font-size: 1rem;
+  font-family: $text;
+  text-decoration: none;
+}
+
+input,
+textarea,
+label {
+  border: none;
+  font-family: $text;
+  font-size: 1rem;
+  padding: 14px 23px;
+  vertical-align: bottom;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  background: none;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  color: darken($main-grey, 40%);
+  font-family: $text;
+  font-size: 0.9rem;
+  margin: 0 0 10px;
+  line-height: 25px;
+}
+
+h1, 
+h2, 
+h3, 
+h4 {
+  font-family: $title;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+li {
+  display: inline-block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.title {
+  font-family: $title;
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.section {
+  background: #fff;
+  padding: 10% 2%;
+
+  @media (min-width: $min-width) {
+    padding: 3% 0;
+  }
+}
+
+.icon {
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.btn {
+  background: $main-color;
+  color: $light-color;
+  font-family: $title;
+  padding: 12px 44px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  vertical-align: sub;
+}
+
+.input-form {
+  width: 90%;
+  border-radius: 16px;
+  
+  @media (min-width: $min-width-small) {
+    width: auto;
+    border-radius: 16px 0px 0px 16px;
+  }
+}
+
+.btn-form {
+  margin-top: 4%;
+  border-radius: 16px;
+
+  @media (min-width: $min-width-small) {
+    border-radius: 0px 16px 16px 0px;
+    margin-top: 0;
+    margin-left: -2px;
+  }
+}
+
+.container {
+  padding: 0 2%;
+
+  @include outer-container;
+
+  @media (min-width: $min-width) {
+    padding: 0;
+  }
+}
+
+.column {
+  width: 100%;
+
+  @media (min-width: $min-width) {
+    @include span-columns(6);
+  }
+}

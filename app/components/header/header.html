@@ -1,0 +1,29 @@
+<div class="header-top-frame"></div>
+<ul class="slider">
+    <li class="slider-img active"><img src="assets/images/slider/slider_01.png" alt=""></li>
+    <li class="slider-img"><img src="assets/images/slider/slider_02.jpg" alt=""></li>
+    <li class="slider-img"><img src="assets/images/slider/slider_03.jpg" alt=""></li>
+</ul>
+<div class="header-content">
+    <div class="column">
+        <div class="header-logo">
+           <h1>{{header.data.logo.text}}</h1>
+           <img src="{{header.data.logo.image}}" alt="{{header.data.logo.text}}-logo">
+        </div>
+        <h2>{{header.data.slogan}}</h2>
+        <ul class="header-icons">
+            <li ng-repeat="icon in header.data.available">
+                <a class="icon mobile-icon" href="{{icon.link}}">
+                    <i class="fa fa-{{icon.name}}"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="column header-mobile">
+        <ul>
+            <li class="slider-img-mobile active-mobile"><img src="assets/images/slider/slider-mobile_01.png" alt=""></li>
+            <li class="slider-img-mobile"><img src="assets/images/slider/slider-mobile_02.jpg" alt=""></li>
+            <li class="slider-img-mobile"><img src="assets/images/slider/slider-mobile_03.jpg" alt=""></li>
+        </ul>
+    </div>
+</div>

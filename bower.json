@@ -1,0 +1,15 @@
+{
+  "name": "template_psd",
+  "description": "HTML/CSS/JS template based on the PSD provided",
+  "main": "index.js",
+  "authors": [
+    "Carolina Loiaza <karolina801chan@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "index.html",
+  "dependencies": {
+    "angular": "^1.5.2",
+    "angular-sanitize": "^1.5.2"
+  }
+}

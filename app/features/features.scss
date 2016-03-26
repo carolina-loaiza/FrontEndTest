@@ -1,0 +1,23 @@
+.features {
+    li {
+        text-align: center;
+        display: block;
+        width: 50%;
+        margin: 10% auto;
+
+        @media (min-width: $min-width) {
+            margin: 0;
+            @include span-columns(4);
+        }
+    }
+}
+
+.feature-icon {
+    width: 98px;
+    height: 98px;
+    background: $main-color;
+    color: $light-color;
+    font-size: 52px;
+    padding-top: 23px;
+    margin-bottom: 20px;
+}

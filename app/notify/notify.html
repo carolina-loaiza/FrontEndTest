@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="column">
+        <h2 class="title">{{notify.data.title}}</h2>
+        <p>{{notify.data.content}}</p>
+        <form action="#">
+            <input type="email" class="input-form" placeholder="Email Address">
+            <button type="submit" class="btn btn-form">Notify</button>
+        </form>
+    </div>
+    <div class="column embed-container">
+        <iframe class="embed-frame" src="{{notify.video}}" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+    </div>
+</div>

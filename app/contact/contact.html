@@ -1,0 +1,9 @@
+<h2 class="title">{{contact.data.title}}</h2>
+<p>{{contact.data.content}}</p>
+<ul class="contact-icons">
+    <li ng-repeat="icon in contact.data.socialMedia">
+        <a class="icon contact-icon" href="{{icon.link}}">
+            <i class="fa fa-{{icon.name}}"></i>
+        </a>
+    </li>
+</ul>

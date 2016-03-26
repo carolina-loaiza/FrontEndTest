@@ -1,0 +1,44 @@
+.notify {
+    background: $main-grey;
+
+    p {
+        margin-right: 40px;
+    }
+
+    form {
+        text-align: center;
+        margin: 6% 0;
+
+        @media (min-width: $min-width) {
+            text-align: left;
+        }
+    }
+}
+
+.embed-container {
+    margin: 0 auto;
+    max-width: 468px;
+    max-height: 272px;
+    position: relative;
+
+    @media (min-width: $min-width) {
+        float: right;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 5px;
+        border-radius: 15px;
+    }
+
+    .embed-frame {
+
+    }
+}
