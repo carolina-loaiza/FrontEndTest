@@ -26,7 +26,7 @@ npm install
 gulp server
 ```
 
-3. Go to localhost in your browser
+4. Go to localhost in your browser
 
 ```sh
 http://localhost:8080/
