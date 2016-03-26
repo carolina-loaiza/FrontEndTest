@@ -1,6 +1,6 @@
 ## Front End Test
 
-Descripcion
+This is a responsive Angularjs template for an app landing page, where you can change the data in the service file.
 
 ## IMPORTANT
 
