@@ -199,7 +199,7 @@ ul {
       display: block;
       overflow: hidden;
       height: 500px;
-      background: url("../assets/images/mobile.png") no-repeat bottom;
+      background: url("../images/mobile.png") no-repeat bottom;
       background-size: contain;
       padding: 66px 0 0 65px;
       position: relative; }
@@ -299,8 +299,9 @@ ul {
 .embed-container {
   margin: 0 auto;
   max-width: 468px;
-  max-height: 272px;
-  position: relative; }
+  min-height: 215px;
+  position: relative;
+  height: 272px; }
   @media (min-width: 930px) {
     .embed-container {
       float: right; } }

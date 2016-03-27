@@ -18,8 +18,9 @@
 .embed-container {
     margin: 0 auto;
     max-width: 468px;
-    max-height: 272px;
+    min-height: 215px;
     position: relative;
+    height: 272px;
 
     @media (min-width: $min-width) {
         float: right;

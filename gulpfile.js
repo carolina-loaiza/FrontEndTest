@@ -24,7 +24,8 @@ var script = [
     './app/components/slider/custom.slider.js'
   ]
 
-  gulp.task('connect', function() {
+  //Gulp Server
+  gulp.task('server', function() {
     connect.server({
       root: 'app',
       livereload: true
@@ -36,6 +37,7 @@ var script = [
       .pipe(connect.reload());
   });
 
+  //Concat Sass Files
   gulp.task('styles', function() {
     return gulp.src(styles)
       .pipe(concat('sass.scss'))
@@ -45,23 +47,25 @@ var script = [
       .pipe(gulp.dest('app/assets/styles'));
   });
 
+  //Inject files into HTML
   gulp.task('inject', function() {
     return gulp.src('./app/index.html')
       .pipe(inject(gulp.src('./app/assets/styles/*.css'), { relative: true}))
       .pipe(inject(gulp.src(bowerFiles(), {read: false}), { relative: true, name: 'bower' }))
-      .pipe(inject(gulp.src(['!./app/bower_components/**/*', './app/**/*.js']) 
+      .pipe(inject(gulp.src(['!./app/bower_components/**/*', '!./app/dist/*.js', './app/**/*.js']) 
         .pipe(angularFilesort()), { relative: true}
       ))
       .pipe(gulp.dest('app'));
   })
 
-  //Watch task
+  //Watch Sass Changes
   gulp.task('watch',function() {
       gulp.watch(styles, ['styles']);
       gulp.watch("app/assets/styles/*.css");
       gulp.watch(['./app/*.html'], ['html']);
   });
 
+  //Dist Files
   gulp.task('distMain', function() {
     return gulp.src(['!./app/bower_components/**/*', '!./app/components/slider/custom.slider.js', './app/**/*.js'])
       .pipe(angularFilesort())
@@ -88,6 +92,6 @@ var script = [
       .pipe(gulp.dest('./app/dist/'));
   });
 
-  gulp.task('dev', ['inject', 'connect', 'watch']);
+  gulp.task('dev', ['inject', 'server', 'watch']);
   gulp.task('concat', ['distMain', 'distVendor', 'distCss']);
   gulp.task('dist', ['distScript']);
